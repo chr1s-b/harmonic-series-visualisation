@@ -136,10 +136,18 @@ class Circle:
         self.speed = newFreq/FPS
 
     def decreaseChildren(self):
-        if self.child.child == None:
-            self.child = None
+        if self.child:
+            if self.child.child == None:
+                self.child = None
+            else:
+                self.child.decreaseChildren()
+        return
+
+    def increaseChildren(self):
+        if self.child:
+            self.child.increaseChildren()
         else:
-            self.child.decreaseChildren()
+            self.child = Circle(self.radius,self.frequency)
         return
 
 class SquareWave(Circle):
@@ -175,14 +183,16 @@ waveStart = WIDTH/4+100
 waveLength = 800
 
 # define wave
+# square wave definition
 freq = 0.5
 acc = 3
 amp = 100
 wave = SquareWave(acc,amp,freq)
 wave.setPos(WIDTH/4,HEIGHT/2)
-# example of basic use
-#c = Circle(80,0.1)
-#c.addChild(Circle(70,0.3))
+# non-square wave example
+# wave = Circle(80,0.1)
+# wave.addChild(Circle(70,0.3))
+# wave.setPos(WIDTH/4,HEIGHT/2)
 
 def main():
     def draw():
