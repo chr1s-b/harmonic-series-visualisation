@@ -1,7 +1,7 @@
 Harmonic Series Visualisation
 ============================
 ## Overview
-This program adds sine waves together that have frequencies related to the harmonic series to form a square wave. The visualisation is made up of many circles which combine to trace a single wave pattern which approximates a square wave. Each circle or 'wheel' represents a singular sine wave with its radius being the wave's amplitude and the frequency of rotation being the wave's frequency.
+This program adds sine waves together that have frequencies related to the harmonic series to form a square wave. This is the Fourier series of a square wave. The visualisation is made up of many circles which combine to trace a single wave pattern which approximates a square wave. Each circle or 'wheel' represents a singular sine wave with its radius being the wave's amplitude and the frequency of rotation being the wave's frequency.
 
 ## Controls
 The wave produced in the program can be adjusted by changing the number of wheels or the frequency of rotation of the wheels. This can be done using the following:
